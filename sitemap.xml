@@ -8,7 +8,7 @@
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-10-01T20:28:30+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/ssrf/</loc>
+    <loc>http://localhost:1313/p/ssrf%E9%9D%B6%E5%9C%BA/</loc>
     <lastmod>2025-10-01T20:28:30+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/page/</loc>
@@ -21,12 +21,10 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/test/</loc>
-  </url><url>
     <loc>http://localhost:1313/%E5%85%B3%E4%BA%8E/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>http://localhost:1313/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</loc>
   </url><url>
-    <loc>http://localhost:1313/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url>
 </urlset>
