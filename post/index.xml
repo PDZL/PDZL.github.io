@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on PDZL</title>
-        <link>https://pdzl.github.io:1313/post/</link>
+        <link>https://pdzl.github.io:443/post/</link>
         <description>Recent content in Posts on PDZL</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>PDZL</copyright>
-        <lastBuildDate>Wed, 01 Oct 2025 20:28:30 +0800</lastBuildDate><atom:link href="https://pdzl.github.io:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 01 Oct 2025 20:28:30 +0800</lastBuildDate><atom:link href="https://pdzl.github.io:443/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>SSRF靶场</title>
-        <link>https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/</link>
+        <link>https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/</link>
         <pubDate>Wed, 01 Oct 2025 20:28:30 +0800</pubDate>
         
-        <guid>https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/</guid>
-        <description>&lt;img src="https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/SSRF.png" alt="Featured image of post SSRF靶场" /&gt;&lt;h2 id=&#34;环境准备&#34;&gt;环境准备
+        <guid>https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/</guid>
+        <description>&lt;img src="https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/SSRF.png" alt="Featured image of post SSRF靶场" /&gt;&lt;h2 id=&#34;环境准备&#34;&gt;环境准备
 &lt;/h2&gt;&lt;p&gt;靶场来源：&lt;a class=&#34;link&#34; href=&#34;https://github.com/ProbiusOfficial/ssrf-labs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;靶场&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载后解压界面如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401.png&#34;
 	width=&#34;882&#34;
 	height=&#34;521&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401_hu_50628ece9b37a110.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401_hu_94cea2418ec969d.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401_hu_50628ece9b37a110.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003142401_hu_94cea2418ec969d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -38,10 +38,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up -d
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234.png&#34;
 	width=&#34;728&#34;
 	height=&#34;660&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234_hu_31af016a42c01c4a.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234_hu_cd3dcff12ed8e4cf.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234_hu_31af016a42c01c4a.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003450234_hu_cd3dcff12ed8e4cf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -61,10 +61,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;查看映射到物理机的端口&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740.png&#34;
 	width=&#34;725&#34;
 	height=&#34;664&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740_hu_7f8ccb45776a05ba.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740_hu_dd57d85cec7e2f7c.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740_hu_7f8ccb45776a05ba.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003736740_hu_dd57d85cec7e2f7c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -75,10 +75,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;可知要访问8880端口&lt;/p&gt;
 &lt;p&gt;通过ifconfig可知虚拟机ip&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091.png&#34;
 	width=&#34;729&#34;
 	height=&#34;227&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091_hu_e23eb0b053c895dc.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091_hu_5b1c5ed53875dd8c.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091_hu_e23eb0b053c895dc.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002003917091_hu_5b1c5ed53875dd8c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -88,10 +88,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;通过访问该ip:8880进入SSRF靶场&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976.png&#34;
 	width=&#34;1838&#34;
 	height=&#34;952&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976_hu_a8e87451f85f910e.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976_hu_c020026f8904d11b.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976_hu_a8e87451f85f910e.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004052976_hu_c020026f8904d11b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -102,10 +102,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;判断ssrf是否存在&#34;&gt;判断SSRF是否存在
 &lt;/h2&gt;&lt;p&gt;能够对外发起网络请求的地方，就可能存在 SSRF。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169.png&#34;
 	width=&#34;1589&#34;
 	height=&#34;1001&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169_hu_2859602d406f702.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169_hu_a1573ad7a2f18402.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169_hu_2859602d406f702.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002004525169_hu_a1573ad7a2f18402.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -126,10 +126,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;file:///etc/passwd
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622.png&#34;
 	width=&#34;792&#34;
 	height=&#34;383&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622_hu_5cfb6126eb38b8d3.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622_hu_900f12b95485f3eb.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622_hu_5cfb6126eb38b8d3.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010027622_hu_900f12b95485f3eb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -147,10 +147,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;file:///etc/hosts
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530.png&#34;
 	width=&#34;746&#34;
 	height=&#34;375&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530_hu_87690c94d8eb3a8e.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530_hu_b2e674907f879c47.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530_hu_87690c94d8eb3a8e.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002010153530_hu_b2e674907f879c47.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -161,10 +161,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;ssrf-探测内网端口&#34;&gt;SSRF 探测内网端口
 &lt;/h2&gt;&lt;p&gt;SSRF 常配合 DICT 协议探测内网端口开放情况&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721.png&#34;
 	width=&#34;866&#34;
 	height=&#34;632&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721_hu_f6ba141717aa04dc.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721_hu_f9aed7885390bbba.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721_hu_f6ba141717aa04dc.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143045721_hu_f9aed7885390bbba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -174,10 +174,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;通过BurpSuit抓包爆破知道内网端口开放情况&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857.png&#34;
 	width=&#34;1315&#34;
 	height=&#34;487&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857_hu_80d5361fa71858db.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857_hu_dff689867d296c15.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857_hu_80d5361fa71858db.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002143225857_hu_dff689867d296c15.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -187,10 +187,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;通过爆破可以整理出端口的开放情况：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006.png&#34;
 	width=&#34;1551&#34;
 	height=&#34;273&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006_hu_401146f007cc2858.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006_hu_54b0cc55344da8bc.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006_hu_401146f007cc2858.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002145834006_hu_54b0cc55344da8bc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -225,10 +225,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;代码注入&#34;&gt;代码注入
 &lt;/h2&gt;&lt;h3 id=&#34;代码注入应用详情&#34;&gt;代码注入应用详情
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644.png&#34;
 	width=&#34;770&#34;
 	height=&#34;236&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644_hu_15cd8c952a2ae44e.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644_hu_debadfaff949815b.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644_hu_15cd8c952a2ae44e.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151002644_hu_debadfaff949815b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -238,10 +238,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;可知有两个文件index.php和shell.php&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401.png&#34;
 	width=&#34;793&#34;
 	height=&#34;615&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401_hu_396e8ccc1b3e88b2.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401_hu_d83ed35825357d20.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401_hu_396e8ccc1b3e88b2.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151046401_hu_d83ed35825357d20.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -251,10 +251,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;将回显的代码写入html文件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290.png&#34;
 	width=&#34;198&#34;
 	height=&#34;203&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290_hu_98165262ecef29ed.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290_hu_2b6a7862ed60a007.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290_hu_98165262ecef29ed.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151119290_hu_2b6a7862ed60a007.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -264,10 +264,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;由此可知能通过cmd这个注入点进行代码注入&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241.png&#34;
 	width=&#34;757&#34;
 	height=&#34;899&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241_hu_5d9809babf4bb532.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241_hu_f4d6ef07e530d96b.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241_hu_5d9809babf4bb532.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002151509241_hu_f4d6ef07e530d96b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -285,10 +285,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;helloct{you_got_flag_22}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776.png&#34;
 	width=&#34;764&#34;
 	height=&#34;631&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776_hu_87df0a34c4e521a3.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776_hu_43ddbc712f2388a9.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776_hu_87df0a34c4e521a3.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152333776_hu_43ddbc712f2388a9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -298,10 +298,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;sql-注入&#34;&gt;SQL 注入
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093.png&#34;
 	width=&#34;775&#34;
 	height=&#34;246&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093_hu_9aff006ba78104f1.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093_hu_601477ea92bc2925.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093_hu_9aff006ba78104f1.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002152648093_hu_601477ea92bc2925.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -311,10 +311,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;可知该关所用数据库为MariaDB，注入点为id&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739.png&#34;
 	width=&#34;747&#34;
 	height=&#34;241&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739_hu_895e75f26f2f673d.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739_hu_428f021552ab3a78.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739_hu_895e75f26f2f673d.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154437739_hu_428f021552ab3a78.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -324,10 +324,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;可知存在数字型SQL注入，显示位有三位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440.png&#34;
 	width=&#34;743&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440_hu_4841a5bae8bf3143.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440_hu_93995133f59fd8b4.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440_hu_4841a5bae8bf3143.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155010440_hu_93995133f59fd8b4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -336,10 +336,10 @@
 		data-flex-basis=&#34;452px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361.png&#34;
 	width=&#34;773&#34;
 	height=&#34;402&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361_hu_2ad5f933bf2837d8.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361_hu_d1c70abd9e79acd2.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361_hu_2ad5f933bf2837d8.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002154942361_hu_d1c70abd9e79acd2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -348,10 +348,10 @@
 		data-flex-basis=&#34;461px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784.png&#34;
 	width=&#34;758&#34;
 	height=&#34;380&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784_hu_23dd6a38d5a209de.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784_hu_be57595fc7df5c05.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784_hu_23dd6a38d5a209de.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155046784_hu_be57595fc7df5c05.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -360,10 +360,10 @@
 		data-flex-basis=&#34;478px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160.png&#34;
 	width=&#34;757&#34;
 	height=&#34;397&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160_hu_7429daab75b9146c.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160_hu_dfef134deaabde69.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160_hu_7429daab75b9146c.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002155130160_hu_dfef134deaabde69.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -383,10 +383,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;命令执行&#34;&gt;命令执行
 &lt;/h2&gt;&lt;h3 id=&#34;命令执行应用详情&#34;&gt;命令执行应用详情
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628.png&#34;
 	width=&#34;599&#34;
 	height=&#34;475&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628_hu_96632b487feb2344.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628_hu_fcda1fa0228b86a2.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628_hu_96632b487feb2344.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002165412628_hu_fcda1fa0228b86a2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -430,10 +430,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;将上诉数据进行两次url编码然后拼接到&lt;code&gt;gopher://172.72.23.24:80/_&lt;/code&gt;后&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724.png&#34;
 	width=&#34;1196&#34;
 	height=&#34;701&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724_hu_1d1ac7708c699e19.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724_hu_61d703521ce7e4d0.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724_hu_1d1ac7708c699e19.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002170201724_hu_61d703521ce7e4d0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -453,10 +453,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;xml-实体注入&#34;&gt;XML 实体注入
 &lt;/h2&gt;&lt;h3 id=&#34;xxe-应用详情&#34;&gt;XXE 应用详情
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847.png&#34;
 	width=&#34;731&#34;
 	height=&#34;294&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847_hu_850911b1e4d616d4.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847_hu_a3cac31d2cfbea29.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847_hu_850911b1e4d616d4.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251002172153847_hu_a3cac31d2cfbea29.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -513,10 +513,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;helloct{you_got_flag_25} 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422.png&#34;
 	width=&#34;1146&#34;
 	height=&#34;685&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422_hu_2345f29b6dcd7078.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422_hu_7e4ae99a5d4a38b1.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422_hu_2345f29b6dcd7078.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006013724422_hu_7e4ae99a5d4a38b1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -630,10 +630,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;将个 PUT 请求二次 URL 编码，最后通过 SSRF 发起这个 POST 请求，返回 201 状态码表示成功写 shell&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592.png&#34;
 	width=&#34;1195&#34;
 	height=&#34;648&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592_hu_c12238d491a29ef3.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592_hu_c3c3b49d76a2242b.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592_hu_c12238d491a29ef3.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003011934592_hu_c3c3b49d76a2242b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -643,10 +643,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着通过 SSRF 发起对 shell.jsp 的 HTTP 请求，成功执行了 &lt;code&gt;cat /flag&lt;/code&gt; 的命令&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852.png&#34;
 	width=&#34;1072&#34;
 	height=&#34;690&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852_hu_ea3fe337b6ab257e.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852_hu_9394054ca8b055f4.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852_hu_ea3fe337b6ab257e.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251003012254852_hu_9394054ca8b055f4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -711,10 +711,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dict://x.x.x.x:6379/&amp;lt;Redis 命令&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833.png&#34;
 	width=&#34;819&#34;
 	height=&#34;924&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833_hu_982c44625c488f4b.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833_hu_f314fa8bdca3b6b7.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833_hu_982c44625c488f4b.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005161442833_hu_f314fa8bdca3b6b7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -759,10 +759,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在目标系统上创建定时任务后，shell 也弹了出来，查看下 &lt;code&gt;cat /etc/hosts&lt;/code&gt; 的确是 172.72.23.27 这台内网机器：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668.png&#34;
 	width=&#34;550&#34;
 	height=&#34;275&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668_hu_7d5a5d1182f72874.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668_hu_a4048371ee361e99.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668_hu_7d5a5d1182f72874.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162357668_hu_a4048371ee361e99.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -771,10 +771,10 @@
 		data-flex-basis=&#34;480px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399.png&#34;
 	width=&#34;341&#34;
 	height=&#34;56&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399_hu_ced6ebb79e6d734c.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399_hu_ce6c3c206f40415e.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399_hu_ced6ebb79e6d734c.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005162501399_hu_ce6c3c206f40415e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -795,10 +795,10 @@
 &lt;/div&gt;&lt;h2 id=&#34;redis-有认证&#34;&gt;Redis 有认证
 &lt;/h2&gt;&lt;h3 id=&#34;redis-auth-应用详情&#34;&gt;Redis auth 应用详情
 &lt;/h3&gt;&lt;p&gt;该 172.72.23.28 主机运行着 Redis 服务，但是有密码验证，无法直接未授权执行命令：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309.png&#34;
 	width=&#34;378&#34;
 	height=&#34;107&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309_hu_5fc622139bc3f334.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309_hu_af79e50dea60391.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309_hu_5fc622139bc3f334.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163321309_hu_af79e50dea60391.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -808,10 +808,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;不过除了 6379 端口还开放了 80 端口，观察后发现存在变量为file的文件包含：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959.png&#34;
 	width=&#34;1207&#34;
 	height=&#34;408&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959_hu_62d4b74682494817.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959_hu_940f1a64d5f6460f.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959_hu_62d4b74682494817.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005163729959_hu_940f1a64d5f6460f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -836,10 +836,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;成功读取到 &lt;code&gt;/etc/redis.conf&lt;/code&gt; 配置文件，直接搜索 &lt;code&gt;requirepass&lt;/code&gt; 关键词来定位寻找密码：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243.png&#34;
 	width=&#34;1216&#34;
 	height=&#34;543&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243_hu_f65076c532abae5d.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243_hu_f8d8181494a5262e.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243_hu_f65076c532abae5d.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164037243_hu_f8d8181494a5262e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251005164037243&#34;
@@ -851,10 +851,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;拿到密码的话就可以正常和 Redis 进行交互了：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674.png&#34;
 	width=&#34;420&#34;
 	height=&#34;308&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674_hu_58d2a1497f616488.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674_hu_b60b59e8ab991f81.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674_hu_58d2a1497f616488.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164219674_hu_b60b59e8ab991f81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -865,10 +865,10 @@
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;ssrf-之-redis-auth&#34;&gt;SSRF 之 Redis auth
 &lt;/h3&gt;&lt;p&gt;首先借助目标系统的 80 端口上的文件包含拿到 Redis 的密码：P@ssw0rd&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833.png&#34;
 	width=&#34;1188&#34;
 	height=&#34;618&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833_hu_cea86e66e74d71ca.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833_hu_7f1e1ebee50b0ac7.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833_hu_cea86e66e74d71ca.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005164551833_hu_7f1e1ebee50b0ac7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -878,10 +878,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;有密码的话先使用 dict 协议进行密码认证看看：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687.png&#34;
 	width=&#34;835&#34;
 	height=&#34;288&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687_hu_e53bdf5d1d81bea4.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687_hu_7a8ce723e1e95538.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687_hu_e53bdf5d1d81bea4.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251005170211687_hu_7a8ce723e1e95538.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -893,10 +893,10 @@
 &lt;p&gt;但是因为 dict 不支持多行命令的原因，这样就导致认证后的参数无法执行，所以 dict 协议理论上来说是没发攻击带认证的 Redis 服务的。&lt;/p&gt;
 &lt;p&gt;那么就得使用gopher协议了，借助&lt;a class=&#34;link&#34; href=&#34;https://github.com/LS95/gopher-redis-auth&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;脚本&lt;/a&gt;生成payload：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364.png&#34;
 	width=&#34;729&#34;
 	height=&#34;500&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364_hu_a9591fa225637376.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364_hu_c2079f1680bf7c93.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364_hu_a9591fa225637376.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003528364_hu_c2079f1680bf7c93.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -914,10 +914,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;通过BP传入：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718.png&#34;
 	width=&#34;1194&#34;
 	height=&#34;684&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718_hu_bb2915e0d330e24f.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718_hu_a293a66d959384b1.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718_hu_bb2915e0d330e24f.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006003947718_hu_a293a66d959384b1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -927,10 +927,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;验证shell创建成功：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923.png&#34;
 	width=&#34;1191&#34;
 	height=&#34;720&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923_hu_5499dc348506e7aa.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923_hu_553b51fec486cde7.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923_hu_5499dc348506e7aa.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006004146923_hu_553b51fec486cde7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -957,10 +957,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flag{7b992efb5ab23a3a3d5100e366c48423}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739.png&#34;
 	width=&#34;1202&#34;
 	height=&#34;661&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739_hu_a4e726dc383f39d3.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739_hu_bdb3c9d5194c781c.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739_hu_a4e726dc383f39d3.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006005315739_hu_bdb3c9d5194c781c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -972,10 +972,10 @@
 &lt;h2 id=&#34;mysql-未授权&#34;&gt;MySQL 未授权
 &lt;/h2&gt;&lt;h3 id=&#34;mysql-应用详情&#34;&gt;MySQL 应用详情
 &lt;/h3&gt;&lt;p&gt;MySQL 空密码可以登录，通过 SSRF 可以和数据库进行交互，取得flag：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174.png&#34;
 	width=&#34;620&#34;
 	height=&#34;556&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174_hu_7a7602784a06ffac.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174_hu_e5ebb4f592f00613.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174_hu_7a7602784a06ffac.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006010605174_hu_e5ebb4f592f00613.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -987,10 +987,10 @@
 &lt;h3 id=&#34;ssrf-之-mysql-未授权&#34;&gt;SSRF 之 MySQL 未授权
 &lt;/h3&gt;&lt;p&gt;通过&lt;a class=&#34;link&#34; href=&#34;https://github.com/tarunkant/Gopherus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;脚本&lt;/a&gt;生成payload：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865.png&#34;
 	width=&#34;725&#34;
 	height=&#34;380&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865_hu_7ffa9762854edb51.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865_hu_b30a69d0d0a78cfb.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865_hu_7ffa9762854edb51.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012807865_hu_b30a69d0d0a78cfb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1016,10 +1016,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;helloct{you_got_flag_29}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925.png&#34;
 	width=&#34;847&#34;
 	height=&#34;381&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925_hu_d4b4ef4a5d145002.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925_hu_4f4b5ca0af9f3952.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925_hu_d4b4ef4a5d145002.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006012911925_hu_4f4b5ca0af9f3952.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1031,10 +1031,10 @@
 &lt;h2 id=&#34;fpmfastcgi协议&#34;&gt;fpm（FastCGI协议）
 &lt;/h2&gt;&lt;p&gt;通过&lt;a class=&#34;link&#34; href=&#34;https://github.com/tarunkant/Gopherus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;脚本&lt;/a&gt;生成payload：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470.png&#34;
 	width=&#34;922&#34;
 	height=&#34;638&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470_hu_46f4375dfe4d73af.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470_hu_49edbf723ece3b1c.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470_hu_46f4375dfe4d73af.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171527470_hu_49edbf723ece3b1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1044,10 +1044,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;通过页面传输，得到根目录下的文件：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287.png&#34;
 	width=&#34;809&#34;
 	height=&#34;822&#34;
-	srcset=&#34;https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287_hu_b6b30942fb91be96.png 480w, https://pdzl.github.io:1313/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287_hu_936ed648c3e4fdc.png 1024w&#34;
+	srcset=&#34;https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287_hu_b6b30942fb91be96.png 480w, https://pdzl.github.io:443/p/ssrf%E9%9D%B6%E5%9C%BA/image-20251006171625287_hu_936ed648c3e4fdc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
