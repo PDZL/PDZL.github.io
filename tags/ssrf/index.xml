@@ -901,4 +901,8 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="98"
 data-flex-basis="236px"
-&gt;&lt;/p&gt;</description></item></channel></rss>
+&gt;&lt;/p&gt;
+&lt;h2 id="参考文章"&gt;参考文章
+&lt;/h2&gt;&lt;blockquote class="alert alert-tip"&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.sqlsec.com/2021/05/ssrf.html" target="_blank" rel="noopener"
+&gt;手把手带你用 SSRF 打穿内网 | 国光&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description></item></channel></rss>

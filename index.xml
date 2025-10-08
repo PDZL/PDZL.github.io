@@ -901,4 +901,16 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="98"
 data-flex-basis="236px"
-&gt;&lt;/p&gt;</description></item><item><title>档案</title><link>https://pdzl.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/archives/</guid><description/></item><item><title>关于</title><link>https://pdzl.github.io/%E5%85%B3%E4%BA%8E/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/%E5%85%B3%E4%BA%8E/</guid><description>&lt;p&gt;这是PDZL的博客。&lt;/p&gt;</description></item><item><title>技术链接</title><link>https://pdzl.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</guid><description/></item><item><title>搜索</title><link>https://pdzl.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/search/</guid><description/></item></channel></rss>
+&gt;&lt;/p&gt;
+&lt;h2 id="参考文章"&gt;参考文章
+&lt;/h2&gt;&lt;blockquote class="alert alert-tip"&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.sqlsec.com/2021/05/ssrf.html" target="_blank" rel="noopener"
+&gt;手把手带你用 SSRF 打穿内网 | 国光&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>档案</title><link>https://pdzl.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/archives/</guid><description/></item><item><title/><link>https://pdzl.github.io/categories/web%E5%AE%89%E5%85%A8/page/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/categories/web%E5%AE%89%E5%85%A8/page/1/</guid><description>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-cn"&gt;
+&lt;head&gt;
+&lt;title&gt;http://localhost:1313/categories/web%E5%AE%89%E5%85%A8/&lt;/title&gt;
+&lt;link rel="canonical" href="http://localhost:1313/categories/web%E5%AE%89%E5%85%A8/"&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta http-equiv="refresh" content="0; url=http://localhost:1313/categories/web%E5%AE%89%E5%85%A8/"&gt;
+&lt;/head&gt;
+&lt;/html&gt;</description></item><item><title>关于</title><link>https://pdzl.github.io/%E5%85%B3%E4%BA%8E/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/%E5%85%B3%E4%BA%8E/</guid><description>&lt;p&gt;这是PDZL的博客。&lt;/p&gt;</description></item><item><title>链接</title><link>https://pdzl.github.io/%E9%93%BE%E6%8E%A5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/%E9%93%BE%E6%8E%A5/</guid><description/></item><item><title>搜索</title><link>https://pdzl.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/search/</guid><description/></item></channel></rss>
