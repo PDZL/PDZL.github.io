@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on PDZL</title><link>https://pdzl.github.io/categories/</link><description>Recent content in Categories on PDZL</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>PDZL</copyright><lastBuildDate>Thu, 09 Oct 2025 09:59:07 +0800</lastBuildDate><atom:link href="https://pdzl.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>web安全</title><link>https://pdzl.github.io/categories/web%E5%AE%89%E5%85%A8/</link><pubDate>Thu, 09 Oct 2025 09:59:07 +0800</pubDate><guid>https://pdzl.github.io/categories/web%E5%AE%89%E5%85%A8/</guid><description>&lt;img src="https://pdzl.github.io/categories/web%E5%AE%89%E5%85%A8/web.png" alt="Featured image of post web安全" /&gt;</description></item><item><title>病毒</title><link>https://pdzl.github.io/categories/%E7%97%85%E6%AF%92/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pdzl.github.io/categories/%E7%97%85%E6%AF%92/</guid><description>&lt;img src="https://pdzl.github.io/categories/%E7%97%85%E6%AF%92/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92.png" alt="Featured image of post 病毒" /&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on PDZL</title>
+        <link>http://localhost:1313/categories/</link>
+        <description>Recent content in Categories on PDZL</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>PDZL</copyright>
+        <lastBuildDate>Thu, 09 Oct 2025 16:58:35 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>病毒</title>
+        <link>http://localhost:1313/categories/%E7%97%85%E6%AF%92/</link>
+        <pubDate>Thu, 09 Oct 2025 16:58:35 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E7%97%85%E6%AF%92/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/%E7%97%85%E6%AF%92/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92.png" alt="Featured image of post 病毒" /&gt;</description>
+        </item>
+        <item>
+        <title>web安全</title>
+        <link>http://localhost:1313/categories/web%E5%AE%89%E5%85%A8/</link>
+        <pubDate>Thu, 09 Oct 2025 09:59:07 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/web%E5%AE%89%E5%85%A8/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/web%E5%AE%89%E5%85%A8/web.png" alt="Featured image of post web安全" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
